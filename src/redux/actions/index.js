@@ -1,9 +1,11 @@
 export const ADD_TO_FAVOURITE = "ADD_TO_FAVOURITE";
 export const DELETE_FROM_FAVOURITE = "DELETE_FROM_FAVOURITE";
 export const FETCH_RESULT = "FETCH_RESULT";
+export const RESET_RESULT = "RESET_RESULT";
 
 export const addToFavouriteAction = data => ({ type: ADD_TO_FAVOURITE, payload: data });
 export const removeFromFavouriteAction = index => ({ type: DELETE_FROM_FAVOURITE, payload: index });
+export const resetResultsAction = () => ({ type: RESET_RESULT });
 
 export const getCompanyAction = params => {
   return async dispatch => {

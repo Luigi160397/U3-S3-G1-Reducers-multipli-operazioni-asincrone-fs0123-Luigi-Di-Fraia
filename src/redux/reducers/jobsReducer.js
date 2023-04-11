@@ -1,4 +1,4 @@
-import { FETCH_RESULT } from "../actions";
+import { FETCH_RESULT, RESET_RESULT } from "../actions";
 
 const initialState = {
   content: []
@@ -11,6 +11,8 @@ const jobsReducer = (state = initialState, action) => {
         ...state,
         content: action.payload
       };
+    case RESET_RESULT:
+      return initialState;
     default:
       return state;
   }
